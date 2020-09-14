@@ -36,6 +36,8 @@ namespace ProductApps
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
                 totalChargeTextBlock.Text = Convert.ToString(cProduct.TotalPayment + 25);
                 wrapChargeTextBlock.Text = Convert.ToString(cProduct.TotalPayment + 25 + 5);
+                decimal wrapcharge = cProduct.TotalPayment + 25 + 5;
+                GSTTextBlock.Text = Convert.ToString((wrapcharge * 11)/10);
             }
             catch (FormatException)
             {
